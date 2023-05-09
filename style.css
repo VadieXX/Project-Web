@@ -1,17 +1,71 @@
+/*General Style*/
+body, a{
+  font-family: 'Courier New', Courier, monospace;
+  color: #212A3E;
+}
+section {
+  height: 100vh;
+  display: flex; 
+  flex-direction: column; 
+}
+button{
+  border: none;
+  background-color: aqua;
+  padding: 5vh;
+  border-radius: 10%;
+  font-weight: bold;
+  cursor: pointer;
+} 
+h1{
+  font-size: 4vh;
+  font-weight: bold;
+}
+p{
+  font-size: 2vh;
+}
+/*Section 1 - "Home"*/
+.home{
+  background-image: url("photos/home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 header{
-    display: inline-block;
-    width: 100%;
+  width: 100%;
+  height: 8vh;
+  display: flex;
 }
-.topnav{
-    display: inline-block;
-    overflow: hidden;
-    padding: 0% 1% 0% 50%;
+#logo{
+  flex: 1;
 }
-.topnav a {
-  float: left;
-  text-align: center;
-  padding: 14px 16px;
+#logo img{
+  max-width: 100%;
+  max-height: 100%;
+}
+#topnav{
+  flex: 2;
+  text-align: right;
+  padding: 3vh 3vw;
+}
+#topnav a{
   text-decoration: none;
-  font-size: 20px;
-  
+  padding: 0vh 1vw 0vh 0vw;
+  font-weight: bold;
+  transition: 0.5s;
+  font-size: large;
+}
+main{
+  position: absolute;
+  top: 30vh;
+  left: 34vw;
+  text-align: center;
+  transform: rotate(-1deg);
+}
+main h1, p, button{
+  padding: 2vh;
+}
+
+
+/*animations*/
+#topnav a:hover{
+  color:aqua;
 }
