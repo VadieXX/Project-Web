@@ -7,16 +7,17 @@
     <title>Project-Web</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <section class="home">
+    <section id="home">
         <header>
             <div id="logo">
                 <img src="photos/logo.png" alt="logo">
             </div>
             <div id="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="#about">ABOUT</a>
+            <a href="#home">Home</a>
+            <a href="#aboutus" onclick="bar()">ABOUT</a>
             <a href="#work">WORK</a>
             <a href="#process">PROCESS</a>
             <a href="#services">SERVICES</a>
@@ -29,6 +30,31 @@
             <p>We are a new design studio based in USA.<br> We have over 20 years of combined<br> experience, and know a thing or two about <br>designing websites and mobile apps.</p>
             <button>CONTACT US</button>
         </main>
+    </section>
+    <section id="aboutus">
+        <div id="aboutus1">
+            <h1>About Us</h1>
+            <p>
+                Divide have don't man wherein air fourth. Own itself make have night won't make.<br>
+                A you under Seed appear which good give. Own give air without fowl moveth dry first<br>
+                heaven fruit, dominion she'd won't very all.
+            </p>
+        </div>
+        <div id="aboutus2" onmouseenter="bar()">
+            <h1>Professional Skills</h1>
+            <p>UI/UX DESIGN   75%</p>
+            <div class="barprogress">
+              <div class="bar" data-value="75"></div>
+            </div>
+            <p>WEB DEVELOPMENT   90%</p>
+            <div class="barprogress">
+              <div class="bar" data-value="90"></div>
+            </div>
+            <p>MARKETING   65%</p>
+            <div class="barprogress">
+              <div class="bar" data-value="65"></div>
+            </div>            
+        </div>
     </section>
     <footer>
 

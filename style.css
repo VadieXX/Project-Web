@@ -11,7 +11,7 @@ section {
 button{
   border: none;
   background-color: aqua;
-  padding: 5vh;
+  padding: 2vh;
   border-radius: 10%;
   font-weight: bold;
   cursor: pointer;
@@ -19,12 +19,14 @@ button{
 h1{
   font-size: 4vh;
   font-weight: bold;
+  padding: 2vh;
 }
 p{
   font-size: 2vh;
+  padding: 2vh;
 }
 /*Section 1 - "Home"*/
-.home{
+#home{
   background-image: url("photos/home.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -60,11 +62,44 @@ main{
   text-align: center;
   transform: rotate(-1deg);
 }
-main h1, p, button{
-  padding: 2vh;
+/*Section 2 - "About Us"*/
+.aboutus{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#aboutus1{
+  flex: 1;
+  background-color: #F1F6F9;
+  text-align: center;
+}
+#aboutus2{
+  flex: 2;
+  padding: 10% 0% 0% 10%;
+  background-image: url(photos/about.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: center;
+  font-weight: bold;
+  color: #F1F6F9;
+} 
+.barprogress {
+  background-color: #ddd;
+  position: relative;
+  width: 40%;
+  height: 1vh;
+  margin: 2vh;
 }
 
-
+.bar{
+  background-color: aqua;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: width 3s ease;
+  width: 0;
+}
 /*animations*/
 #topnav a:hover{
   color:aqua;
