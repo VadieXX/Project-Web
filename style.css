@@ -1,7 +1,11 @@
 /*General Style*/
-body, a{
+body{
   font-family: 'Courier New', Courier, monospace;
   color: #212A3E;
+}
+a{
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
 }
 section {
   height: 100vh;
@@ -37,16 +41,19 @@ img{
 }
 header{
   width: 100%;
-  height: 8vh;
+  height: 8%;
   display: flex;
 }
 #logo{
   flex: 1;
 }
 #topnav{
+  display: flex;
+  flex-direction: row;
   flex: 2;
-  text-align: right;
+  justify-content: space-between;
   padding: 3vh 3vw;
+  flex-wrap: wrap;
 }
 #topnav a{
   text-decoration: none;
@@ -105,12 +112,12 @@ main{
 background-color: aqua;
 }
 #work1{
-  height: 20vh;
+  height: 20%;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-#meter1, #meter2, #meter3, #meter4{
+#meter1, #meter2, #meter3, #meter4, .meterImg{
   width: 12.5%;
   display: flex;
   flex-direction: column;
@@ -119,20 +126,18 @@ background-color: aqua;
 }
 #meter1 p, #meter2 p, #meter3 p, #meter4 p{
   padding: 0%;
+  width: 100%;
 }
 #work2{
-  height: 74vh;
+  display: flex;
+  height: 74%;
   width: 100%;
+  flex-wrap: wrap;
 }
-.gallery{
-  width: 100%;
-}
-.gallery tr{
-  width: 100%;
-}
-.gallery td{
-  height: 37.5vh;
-  width:25%;
+#work2 img{
+  width: 25%;
+  object-fit: cover;
+  height: 50%;
 }
 #workbtn{
   height: 6vh;
@@ -146,22 +151,29 @@ background-color: aqua;
   flex-direction: column;
 }
 .process1{
-  height: 60vh;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  align-items: center;
+}
+.yt{
+  height: 50%;
+  width: 60%;
 }
 .process1 h1{
-  padding-top: 8vh;
+  padding-top: 2vh;
 }
 .process2{
-  height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 40%;
+  width: 100%;
   background-color: #F5F5F5;
 }
-.processtb{
-  width: 100%;
-}
-.processtb td{
+.item{
+  width: 25%;
   text-align: center;
-  padding-top:5vh;
 }
 /*Section 5*/
 #section5{
@@ -170,7 +182,7 @@ background-color: aqua;
 }
 .quote-container {
   width: 100%;
-  height: 70vh;
+  height: 70%;
   position: relative;
   overflow: hidden;
   background-color: aqua;
@@ -192,8 +204,11 @@ background-color: aqua;
 
 .quote {
   font-size: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  padding: 35vh;
 }
 .banner{
   width: 100%;
@@ -210,7 +225,7 @@ background-color: aqua;
 }
 .contact{
   text-align: center;
-  height: 80vh;
+  height: 75vh;
   background-color: #ddd;
 }
 #nick, #email{
@@ -243,7 +258,7 @@ background-color: aqua;
 footer{
   display: flex;
   flex-direction: row;
-  height: 20vh;
+  height: 25%;
   width: 100%;
   background-color: #212A3E;
   color: #ddd;
@@ -266,53 +281,97 @@ h2{
   align-items: center;
 }
 .links{
-  width: 50vw;
+  width: 50%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
 }
-.links td{
-  height: 2vh;
-  width: 10vw;
-  text-align: center;
-  padding-top: 1vh;
+.vert{
+  width: 25%;
+  max-height: 25%;
 }
+
 /*animations*/
 #topnav a:hover{
   color:aqua;
 }
 
-/*gallery*/
-.gallery1{
-  background-image: url("photos/Gallery/1.jpg");
-  background-size: cover;
+/*Media*/
+@media (max-width: 400px) {
+  section {
+    height: auto;
+    display: flex; 
+    flex-direction: column; 
+  }
+  /*Section 1*/
+  .section1{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  header{
+    flex: 1;
+  }
+  main{
+   padding: auto;
+   transform: none;
+   left: auto;
+   top: auto;
+   flex: 1;
+   position: relative;
+   padding-bottom: 2%;
+  }
+  /*Section 3*/
+ #work1{
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 0% 5% 0%;
+ }
+ #work2{
+  display: flex;
+  height: 50%;
+ }
+ /*Section 4*/
+ .section4{
+  height: 100%;
+ }
+ .item{
+  width: 50%;
+  text-align: center;
 }
-.gallery2{
-  background-image: url("photos/Gallery/2.jpg");
-  background-size: cover;
+/*Section 6*/
+.contact{
+  height: auto;
+  padding-bottom: 2%;
 }
-.gallery3{
-  background-image: url("photos/Gallery/3.jpg");
-  background-size: cover;
+#nick, #email{
+ 
+  width: 40vw;
 }
-.gallery4{
-  background-image: url("photos/Gallery/4.jpg");
-  background-size: cover;
+#title{
+  width: 86vw;
 }
-.gallery5{
-  background-image: url("photos/Gallery/5.jpg");
-  background-size: cover;
+#textarea_com{
+  width: 86vw;
 }
-.gallery6{
-  background-image: url("photos/Gallery/6.jpg");
-  background-size: cover;
+footer{
+  flex-wrap: wrap;
 }
-.gallery7{
-  background-image: url("photos/Gallery/7.jpg");
-  background-size: cover;
+.copyr{
+  padding-top: 1%;
+  width: 100vw;
 }
-.gallery8{
-  background-image: url("photos/Gallery/8.jpg");
-  background-size: cover;
+.info{
+  width: 100vw;
+}
+.links{
+  border-top: 2px solid #F5F5F5;
+  
+  width: 100%;
+}
 }
